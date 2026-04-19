@@ -40,7 +40,11 @@
     transform: translate(-50%, -50%);
     transition: transform 0.1s;
   }
-  .cursor-ring {
+ @media only screen and (min-width: 468px) {
+  .cursor-dot{
+   display:none}
+}
+  .cursor-ring { 
     width: 36px; height: 36px;
     border: 1.5px solid var(--accent);
     border-radius: 50%;
@@ -625,7 +629,8 @@
     <div class="section-label reveal">Get In Touch</div>
     <h2 class="section-title reveal">Send a <em>Message</em></h2>
     
-    <form class="form-grid reveal" onsubmit="handleSubmit(event)">
+    <form class="form-grid reveal"  action="https://formspree.io/f/xkokbyjw"
+  method="POST">
       <div class="form-group">
         <label class="form-label">First Name</label>
         <input class="form-input" type="text" placeholder="John" />
